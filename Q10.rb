@@ -5,44 +5,12 @@
 
 def rearrange
     arr = ["no bun","bug bun bug bun bug bug","bunny bug","buggy bug bug buggy"]
-    userstr = "bun"
-    
-    hash = Hash.new
-    arr.each do |i|
-        count = 0
-        word = i.split
-        word.each do |j|
-            if j == userstr
-                count +=1
-            end
-        end
-        hash[i] = count
-    end
-    puts hash
-    print hash.keys.sort_by{|key| hash[key]}.reverse
+    userstr = "bug"
+    print arr.sort_by{|k| k.count(userstr)}.reverse
 end
 rearrange
 
-# def str 
-#     arr = ["no bun","bug bun bug bun bug bug","bunny bug","buggy bug bug buggy"]
-#     uc = "bun"
-    
-#     hash = Hash.new
-#     arr.each do |i|
-#         count = 0
-#         word = i.split
-#         word.each do |j|
-#             if j == uc
-#                 count +=1
-#             end
-#         end
-#         hash[i] = count
-#     end
-#     puts hash
-#     print hash.keys.sort_by{|key| hash[key]}.reverse
-# end
 
-# str
         
 
  
